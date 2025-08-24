@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         String name1 = "Jojo Dore";
@@ -175,6 +178,66 @@ public class Main {
         System.out.println();
         System.out.println("Task 3");
         System.out.println();
+
+        Scanner scan = new Scanner(System.in);
+        int[] array = new int[5];
+
+//        System.out.println("Enter 5 integer numbers: ");
+//
+//        for (int i = 0; i < 5; i++) {
+//            array[i] = scan.nextInt();
+//        }
+//
+//        for (int num : array) {
+//            System.out.print(num + " ");
+//        }
+
+        System.out.println();
+
+        System.out.println();
+        System.out.println("Task 4");
+        System.out.println();
+
+        int[] examScores = {74, 95, 99, 60, 65, 63, 89};
+
+        int sumOfExamScores = 0;
+        for (int score : examScores) {
+            sumOfExamScores += score;
+        }
+        double averageScore = (double) sumOfExamScores / examScores.length;
+
+        System.out.printf("Average score: %.2f%n", averageScore);
+
+        if (averageScore <= 70) {
+            System.out.println("You failed this");
+        } else {
+            System.out.println("You passed, congratulation");
+        }
+
+        //Task 5
+
+        System.out.println();
+
+        System.out.println();
+        System.out.println("Task 5");
+        System.out.println();
+
+        int[] randomNums = new int[10];
+        for (int i = 0; i < randomNums.length; i++) {
+            randomNums[i] = (int) (Math.random() * 100);
+        }
+
+        System.out.println(Arrays.toString(randomNums));
+        Arrays.sort(randomNums);
+        System.out.println(Arrays.toString(randomNums));
+        System.out.println("The minimum is: " + randomNums[0]);
+        System.out.println("The maximum is: " + randomNums[randomNums.length - 1]);
+        int sumOfRandomNumbers = 0;
+        for (int num : randomNums) {
+            sumOfRandomNumbers += num;
+        }
+        double averageOfRandomNumbers = (double) sumOfRandomNumbers / randomNums.length;
+        System.out.println("The average is: " + String.format("%.2f", averageOfRandomNumbers));
 
 
 
